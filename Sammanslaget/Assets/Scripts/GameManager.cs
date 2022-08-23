@@ -50,6 +50,5 @@ public class GameManager : MonoBehaviour
                 WorldState.Value += clampCheck;
             }
         }
-        print(WorldState.Value);
     }
 }

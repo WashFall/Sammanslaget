@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     public bool grounded;
 
     void Start()
