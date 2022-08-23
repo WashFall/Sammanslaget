@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: objectType
       value: Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 6618114527349627259, guid: c53d14805ac39f44a80c079ca2494f03, type: 3}
+      propertyPath: worldStateValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6839801711521224123, guid: c53d14805ac39f44a80c079ca2494f03, type: 3}
       propertyPath: m_Sprite
       value: 

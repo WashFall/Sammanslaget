@@ -27,15 +27,29 @@ public class GameManager : MonoBehaviour
         {
             score.ScoreUp(pickUp.GetComponent<PickUp>().objectType);
         }
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
+        int clampCheck = pickUp.GetComponent<PickUp>().worldStateValue;
+        if(clampCheck == 1)
+        {
+            if(WorldState.Value == 10)
+            {
+                return;
+            }
+            else
+            {
+                WorldState.Value += clampCheck;
+            }
+        }
+        else if(clampCheck == -1)
+        {
+            if(WorldState.Value == -10)
+            {
+                return;
+            }
+            else
+            {
+                WorldState.Value += clampCheck;
+            }
+        }
+        print(WorldState.Value);
     }
 }

@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
     Rigidbody2D rb;
     public string objectType;
+    public int worldStateValue;
 
     void Start()
     {
