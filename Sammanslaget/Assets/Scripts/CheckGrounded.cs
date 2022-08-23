@@ -9,7 +9,6 @@ public class CheckGrounded : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerMove>().grounded = true;
-            Debug.Log("Grounded");
         }
     }
 
@@ -18,7 +17,6 @@ public class CheckGrounded : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerMove>().grounded = false;
-            Debug.Log("Jumping");
         }
     }
 }

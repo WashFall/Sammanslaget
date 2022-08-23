@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    Rigidbody2D rigid;
+    Rigidbody2D rb;
     public bool grounded;
 
     void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && grounded)
         {
-            rigid.velocity = new Vector2(0, 20);
+            rb.velocity = new Vector2(0, 20);
         }
     }
 }
