@@ -165,4 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27aed3d438c44a48a273ce6e35034fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: Cherry
+  objectType: 
