@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -38,6 +39,11 @@ public class GameManager : MonoBehaviour
             slider.SetActive(sliderActive);
             sliderActive = sliderActive ? false : true;
             print(sliderActive);
+        }
+
+        if(WorldState.Value == 10 && PickUpsScore.Bottle >= 10)
+        {
+            SceneManager.LoadScene("WinScreen");
         }
     }
 
