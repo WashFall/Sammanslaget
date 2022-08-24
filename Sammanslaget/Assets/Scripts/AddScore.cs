@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AddScore : MonoBehaviour
 {
@@ -10,15 +11,15 @@ public class AddScore : MonoBehaviour
 
     private void Start()
     {
-        GameManager.INSTANCE.AddScoreList.Add(this);
-    }
-
-    public void ScoreUp(string pickUp)
-    {
-        if(pickUp == itemType)
+        if(itemType == "Cherry")
         {
-            score++;
-            GetComponent<Text>().text = score.ToString();
+            score = PickUpsScore.Cherry;
+            GetComponent<TMP_Text>().text = score.ToString();
+        }
+        else if(itemType == "Bottle")
+        {
+            score = PickUpsScore.Bottle;
+            GetComponent<TMP_Text>().text = score.ToString();
         }
     }
 }

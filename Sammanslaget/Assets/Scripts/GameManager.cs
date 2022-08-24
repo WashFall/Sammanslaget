@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
     public static GameManager INSTANCE { get { return _instance; } }
 
-    public List<AddScore> AddScoreList = new List<AddScore>();
     public GameObject slider;
     public GameObject sky;
     private MeshRenderer skyRend;
@@ -44,10 +43,17 @@ public class GameManager : MonoBehaviour
 
     public void OnPickUp(GameObject pickUp)
     {
-        foreach(AddScore score in AddScoreList)
+        PickUp temp = pickUp.GetComponent<PickUp>();
+
+        if(temp.objectType == "Cherry")
         {
-            score.ScoreUp(pickUp.GetComponent<PickUp>().objectType);
+            PickUpsScore.Cherry++;
         }
+        else if(temp.objectType == "Bottle")
+        {
+            PickUpsScore.Bottle++;
+        }
+
         int clampCheck = pickUp.GetComponent<PickUp>().worldStateValue;
         if(clampCheck == 1)
         {
