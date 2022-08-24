@@ -11,7 +11,8 @@ public class PickUp : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(-10, 0);
+        int veloSpeed = Random.Range(-8, -15);
+        rb.velocity = new Vector2(veloSpeed, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,6 +20,7 @@ public class PickUp : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             GameManager.INSTANCE.OnPickUp(gameObject);
+            GameManager.INSTANCE.SkyColorChange();
             Destroy(gameObject);
         }
     }
@@ -27,6 +29,7 @@ public class PickUp : MonoBehaviour
     {
         if(transform.position.x < -10)
         {
+            GameManager.INSTANCE.OnMissedPickUp(worldStateValue);
             Destroy(gameObject);
         }
     }

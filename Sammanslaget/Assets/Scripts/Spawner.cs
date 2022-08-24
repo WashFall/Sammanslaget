@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour
     private float height;
     private int randomHeight;
     private int spawnIndex;
+    private float spawnRate;
     private List<GameObject> spawnList = new List<GameObject>();
 
     void Start()
@@ -19,16 +20,18 @@ public class Spawner : MonoBehaviour
 
         SetHeight();
         SetSpawnObject();
+        SetSpawnRate();
     }
 
     void Update()
     {
-        if(Time.time > startTime + 1.5f)
+        if(Time.time > startTime + spawnRate)
         {
             Instantiate(spawnList[spawnIndex], new Vector2(8.5f, height), Quaternion.identity);
             startTime = Time.time;
             SetHeight();
             SetSpawnObject();
+            SetSpawnRate();
         }
     }
 
@@ -53,5 +56,19 @@ public class Spawner : MonoBehaviour
         {
             height = -3.5f;
         }
+    }
+
+    void SetSpawnRate()
+    {
+        int spawnRateSelect = Random.Range(1, 5);
+
+        if (spawnRateSelect == 1)
+            spawnRate = 0.75f;
+        else if (spawnRateSelect == 2)
+            spawnRate = 1f;
+        else if (spawnRateSelect == 3)
+            spawnRate = 1.25f;
+        else if (spawnRateSelect == 4)
+            spawnRate = 1.5f;
     }
 }
