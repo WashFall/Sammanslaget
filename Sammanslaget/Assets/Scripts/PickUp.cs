@@ -30,6 +30,7 @@ public class PickUp : MonoBehaviour
         if(transform.position.x < -10)
         {
             GameManager.INSTANCE.OnMissedPickUp(worldStateValue);
+            GameManager.INSTANCE.SkyColorChange();
             Destroy(gameObject);
         }
     }

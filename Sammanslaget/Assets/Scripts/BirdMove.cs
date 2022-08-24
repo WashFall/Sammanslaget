@@ -12,7 +12,7 @@ public class BirdMove : MonoBehaviour
     {
         birdAnim = GetComponentInChildren<Animator>();
         startPos = transform.position;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(-10, 0);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(-7, 0);
     }
 
     void Update()
