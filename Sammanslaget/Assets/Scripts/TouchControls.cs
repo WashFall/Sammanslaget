@@ -19,7 +19,7 @@ public class TouchControls : MonoBehaviour
         if (Physics.Raycast(ray, out hit) && pm.grounded)
         {
             player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
-            ServiceLocator.sound.PlayOnce("jump");
+            ServiceLocator.sound.PlayOnce("jump2");
         }
     }
 }

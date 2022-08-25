@@ -14,10 +14,10 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             rb.velocity = new Vector2(0, 20);
-            ServiceLocator.sound.PlayOnce("jump");
+            ServiceLocator.sound.PlayOnce("jump2");
         }
     }
 }

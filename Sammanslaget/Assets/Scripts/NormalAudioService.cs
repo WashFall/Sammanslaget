@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NormalAudioService : IAudioService
 {
-    private int sourceCount = 20;
+    private int sourceCount = 6;
     private List<AudioClip> clips;
     private string audioPath = "SFX/";
     private List<AudioSource> sources;
@@ -17,6 +17,8 @@ public class NormalAudioService : IAudioService
         {
             AudioSource source = new GameObject().AddComponent<AudioSource>();
             sources.Add(source);
+            source.volume = source.volume * 0.3f;
+            Object.DontDestroyOnLoad(source);
         }
 
         clips = new List<AudioClip>();

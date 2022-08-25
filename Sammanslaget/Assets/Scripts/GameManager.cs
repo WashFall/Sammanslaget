@@ -41,8 +41,6 @@ public class GameManager : MonoBehaviour
         sunRend = sun.GetComponent<SpriteRenderer>();
         sunChange = sun.GetComponent<SunChange>();
         timer = Time.time;
-
-        ServiceLocator.sound.StartLoop("Background");
     }
 
     private void Update()

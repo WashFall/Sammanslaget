@@ -21,7 +21,7 @@ public class PickUp : MonoBehaviour
         {
             GameManager.INSTANCE.OnPickUp(gameObject);
             GameManager.INSTANCE.SkyColorChange();
-            ServiceLocator.sound.PlayOnce("plopp");
+            ServiceLocator.sound.PlayOnce("plopp2");
             Destroy(gameObject);
         }
     }
