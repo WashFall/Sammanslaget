@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject slider;
     public GameObject sky;
+    public GameObject sun;
+    private SpriteRenderer sunRend;
     private MeshRenderer skyRend;
 
     private bool sliderActive = true;
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         skyRend = sky.GetComponent<MeshRenderer>();
+        sunRend = sun.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -41,7 +44,7 @@ public class GameManager : MonoBehaviour
             print(sliderActive);
         }
 
-        if(WorldState.Value == 10 && PickUpsScore.Bottle >= 10)
+        if(WorldState.Value == 5 && PickUpsScore.Bottle >= 10)
         {
             SceneManager.LoadScene("WinScreen");
         }
@@ -63,7 +66,7 @@ public class GameManager : MonoBehaviour
         int clampCheck = pickUp.GetComponent<PickUp>().worldStateValue;
         if(clampCheck == 1)
         {
-            if(WorldState.Value == 10)
+            if(WorldState.Value == 5)
             {
                 return;
             }
@@ -74,7 +77,7 @@ public class GameManager : MonoBehaviour
         }
         else if(clampCheck == -1)
         {
-            if(WorldState.Value == -10)
+            if(WorldState.Value == -5)
             {
                 return;
             }
@@ -87,25 +90,30 @@ public class GameManager : MonoBehaviour
 
     public void SkyColorChange()
     {
-        if(WorldState.Value <= -8)
+        if(WorldState.Value <= -4)
         {
             skyRend.material.color = SkyColors.level5;
+            sunRend.material.color = SkyColors.level5;
         }
-        else if(WorldState.Value <= -6 && WorldState.Value > -8)
+        else if(WorldState.Value == -3)
         {
             skyRend.material.color = SkyColors.level4;
+            sunRend.material.color = SkyColors.level4;
         }
-        else if (WorldState.Value <= -4 && WorldState.Value > -6)
+        else if (WorldState.Value == -2)
         {
             skyRend.material.color = SkyColors.level3;
+            sunRend.material.color = SkyColors.level3;
         }
-        else if (WorldState.Value <= -2 && WorldState.Value > -4)
+        else if (WorldState.Value == -1)
         {
             skyRend.material.color = SkyColors.level2;
+            sunRend.material.color = SkyColors.level2;
         }
         else if(WorldState.Value >= 0)
         {
             skyRend.material.color = SkyColors.level1;
+            sunRend.material.color = SkyColors.level1;
         }
     }
 
@@ -113,7 +121,7 @@ public class GameManager : MonoBehaviour
     {
         if (itemValue == 1)
         {
-            if (WorldState.Value == -10)
+            if (WorldState.Value == -5)
             {
                 return;
             }

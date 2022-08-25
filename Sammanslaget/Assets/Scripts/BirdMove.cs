@@ -22,7 +22,7 @@ public class BirdMove : MonoBehaviour
             transform.position = startPos;
         }
 
-        if(WorldState.Value < -6)
+        if(WorldState.Value <= -3)
         {
             birdAnim.SetBool("ToggleBirdAnim", true);
         }
