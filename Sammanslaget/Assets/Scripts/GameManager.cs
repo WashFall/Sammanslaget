@@ -12,8 +12,9 @@ public class GameManager : MonoBehaviour
     public GameObject slider;
     public GameObject sky;
     public GameObject sun;
+    public GameObject grass;
     private SpriteRenderer sunRend;
-    private MeshRenderer skyRend;
+    private MeshRenderer skyRend, grassRend;
     public string[] endTexts = new string[3] 
     { EndScreenTexts.text1, EndScreenTexts.text2, EndScreenTexts.text3 };
     public float timer;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         skyRend = sky.GetComponent<MeshRenderer>();
+        grassRend = grass.GetComponent<MeshRenderer>();
         sunRend = sun.GetComponent<SpriteRenderer>();
         timer = Time.time;
     }
@@ -102,30 +104,61 @@ public class GameManager : MonoBehaviour
 
     public void SkyColorChange()
     {
-        if(WorldState.Value <= -4)
+        if (WorldState.Value <= -5)
         {
-            skyRend.material.color = SkyColors.level5;
-            sunRend.material.color = SkyColors.level5;
+            skyRend.material.color = SkyColors.level05;
+            sunRend.material.color = SkyColors.level05;
+            grassRend.material.color = GrassColors.level5;
+        }
+        else if (WorldState.Value <= -4)
+        {
+            skyRend.material.color = SkyColors.level04;
+            sunRend.material.color = SkyColors.level04;
+            grassRend.material.color = GrassColors.level4;
         }
         else if(WorldState.Value == -3)
         {
-            skyRend.material.color = SkyColors.level4;
-            sunRend.material.color = SkyColors.level4;
+            skyRend.material.color = SkyColors.level03;
+            sunRend.material.color = SkyColors.level03;
+            grassRend.material.color = GrassColors.level3;
         }
         else if (WorldState.Value == -2)
         {
-            skyRend.material.color = SkyColors.level3;
-            sunRend.material.color = SkyColors.level3;
+            skyRend.material.color = SkyColors.level02;
+            sunRend.material.color = SkyColors.level02;
+            grassRend.material.color = GrassColors.level2;
         }
         else if (WorldState.Value == -1)
         {
-            skyRend.material.color = SkyColors.level2;
-            sunRend.material.color = SkyColors.level2;
+            skyRend.material.color = SkyColors.level01;
+            sunRend.material.color = SkyColors.level01;
+            grassRend.material.color = GrassColors.level1;
         }
-        else if(WorldState.Value >= 0)
+        else if(WorldState.Value == 0)
+        {
+            skyRend.material.color = SkyColors.level0;
+            sunRend.material.color = SkyColors.level0;
+            grassRend.material.color = GrassColors.level0;
+        }
+        else if (WorldState.Value == 1)
         {
             skyRend.material.color = SkyColors.level1;
-            sunRend.material.color = SkyColors.level1;
+        }
+        else if (WorldState.Value == 2)
+        {
+            skyRend.material.color = SkyColors.level2;
+        }
+        else if (WorldState.Value == 3)
+        {
+            skyRend.material.color = SkyColors.level3;
+        }
+        else if (WorldState.Value == 4)
+        {
+            skyRend.material.color = SkyColors.level4;
+        }
+        else if (WorldState.Value == 5)
+        {
+            skyRend.material.color = SkyColors.level5;
         }
     }
 

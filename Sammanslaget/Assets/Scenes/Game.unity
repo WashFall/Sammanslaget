@@ -794,7 +794,7 @@ MonoBehaviour:
     kan l\xE4mnas in till second hand butiker eller st\xF6dorganisationer s\xE5 att
     kl\xE4derna kan \xE5teranv\xE4ndas av andra m\xE4nniskor och p\xE5 s\xE5 s\xE4tt
     spara p\xE5 milj\xF6n och hj\xE4lpa mer beh\xF6vande m\xE4nniskor."
-  textIndex: 0
+  timer: 0
 --- !u!1 &676443805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,12 +1799,12 @@ GameObject:
   - component: {fileID: 1657105509}
   - component: {fileID: 1657105508}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Fog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1657105508
 SpriteRenderer:
   m_ObjectHideFlags: 0
