@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 655338116}
   - component: {fileID: 655338115}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TextDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1151,6 +1151,7 @@ GameObject:
   - component: {fileID: 1092809560}
   - component: {fileID: 1092809562}
   - component: {fileID: 1092809561}
+  - component: {fileID: 1092809563}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1197,9 +1198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "V\xE4rldens bin hotas av utrotning. \xC4ven m\xE4nniskor hotas n\xE4r
-    bina f\xF6rsvinner. Denna lilla insekt bidrar p\xE5 ett ov\xE4rderligt s\xE4tt
-    till livsmedelsproduktion \xF6ver hela jorden."
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 15e7aafce1897194d93d05dac4da8d91, type: 2}
   m_sharedMaterial: {fileID: -574072178665457621, guid: 15e7aafce1897194d93d05dac4da8d91, type: 2}
@@ -1276,6 +1275,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092809559}
   m_CullTransparentMesh: 1
+--- !u!114 &1092809563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092809559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de37e357726578438e8bef9e5cf8e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1514986774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1395,6 +1406,7 @@ GameObject:
   - component: {fileID: 1530780424}
   - component: {fileID: 1530780423}
   - component: {fileID: 1530780422}
+  - component: {fileID: 1530780425}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1465,7 +1477,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1530780423}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1530780425}
+        m_TargetAssemblyTypeName: PlayAgain, Assembly-CSharp
+        m_MethodName: PlayAgainButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1530780423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1504,6 +1528,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530780420}
   m_CullTransparentMesh: 1
+--- !u!114 &1530780425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530780420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1aa1294911144f45b2d33dbc2fdebb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1551181769
 GameObject:
   m_ObjectHideFlags: 0

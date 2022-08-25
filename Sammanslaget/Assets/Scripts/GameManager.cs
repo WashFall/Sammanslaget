@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public GameObject sun;
     private SpriteRenderer sunRend;
     private MeshRenderer skyRend;
+    public string[] endTexts = new string[3] 
+    { EndScreenTexts.text1, EndScreenTexts.text2, EndScreenTexts.text3 };
+    public int textIndex = 0;
 
     private bool sliderActive = true;
 
