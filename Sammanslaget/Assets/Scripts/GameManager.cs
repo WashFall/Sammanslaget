@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("WinScreen");
         }
-        else if(WorldState.Value == -5 && PickUpsScore.Cherry >= 10)
+        else if(WorldState.Value == -5 && PickUpsScore.Cherry + PickUpsScore.Bee >= 10)
         {
             SceneManager.LoadScene("LoseScreen");
         }
@@ -75,6 +75,10 @@ public class GameManager : MonoBehaviour
         else if(temp.objectType == "Bottle")
         {
             PickUpsScore.Bottle++;
+        }
+        else if (temp.objectType == "Bee")
+        {
+            PickUpsScore.Bee++;
         }
 
         int clampCheck = pickUp.GetComponent<PickUp>().worldStateValue;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject cherry, bottle;
+    public GameObject cherry, bottle, bee;
     private float startTime;
     private float height;
     private int randomHeight;
@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
         startTime = Time.time;
         spawnList.Add(cherry);
         spawnList.Add(bottle);
+        spawnList.Add(bee);
 
         SetHeight();
         SetSpawnObject();

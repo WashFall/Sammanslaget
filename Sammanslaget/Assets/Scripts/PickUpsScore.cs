@@ -6,4 +6,5 @@ public static class PickUpsScore
 {
     public static int Cherry = 0;
     public static int Bottle = 0;
+    public static int Bee = 0;
 }

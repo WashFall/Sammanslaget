@@ -301,6 +301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cherry: {fileID: 4925631813640304030, guid: 52f4ff5b7faaa914d92b99f640e7c989, type: 3}
   bottle: {fileID: 4031320975707693070, guid: 8cf436ae0bb9edc4292ba9c9ef5a555f, type: 3}
+  bee: {fileID: 7161325500884060395, guid: 58aeb9c35c777b3449b5cfaa368a14a7, type: 3}
 --- !u!4 &68789319
 Transform:
   m_ObjectHideFlags: 0
@@ -781,6 +782,7 @@ MonoBehaviour:
   slider: {fileID: 571885678}
   sky: {fileID: 1235409773}
   sun: {fileID: 1796198503}
+  grass: {fileID: 1095833603}
   endTexts:
   - "V\xE4rldens bin hotas av utrotning. \xC4ven m\xE4nniskor hotas n\xE4r bina f\xF6rsvinner.
     Denna lilla insekt bidrar p\xE5 ett ov\xE4rderligt s\xE4tt till livsmedelsproduktion
@@ -2094,6 +2096,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 355870280928283581, guid: 793abd54fef4c6c4c98dda7b1353df17, type: 3}
   m_PrefabInstance: {fileID: 1437524999}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2137639543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2137639545}
+  - component: {fileID: 2137639544}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2137639544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137639543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1ef9038b9976d4190efa4b64b05cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2137639545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137639543}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.43670177, y: 0.3802933, z: -17.89603}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3546725662986211247
 PrefabInstance:
   m_ObjectHideFlags: 0

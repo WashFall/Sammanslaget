@@ -21,5 +21,10 @@ public class AddScore : MonoBehaviour
             score = PickUpsScore.Bottle;
             GetComponent<TMP_Text>().text = score.ToString();
         }
+        else if(itemType == "Bee")
+        {
+            score = PickUpsScore.Bee;
+            GetComponent<TMP_Text>().text = score.ToString();
+        }
     }
 }

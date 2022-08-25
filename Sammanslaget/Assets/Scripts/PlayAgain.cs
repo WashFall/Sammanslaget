@@ -10,6 +10,7 @@ public class PlayAgain : MonoBehaviour
         WorldState.Value = 0;
         PickUpsScore.Cherry = 0;
         PickUpsScore.Bottle = 0;
+        PickUpsScore.Bee = 0;
         SceneManager.LoadScene("Game");
     }
 }

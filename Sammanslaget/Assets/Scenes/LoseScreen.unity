@@ -1743,7 +1743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5012197963798586097, guid: 47ec5020ca4c8f449ad91b670a917d16, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5012197963798586098, guid: 47ec5020ca4c8f449ad91b670a917d16, type: 3}
       propertyPath: m_Pivot.x
@@ -1829,6 +1829,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5012197963798586099, guid: 47ec5020ca4c8f449ad91b670a917d16, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7eb97b3351c773d43b052743dacb8b33, type: 3}
     m_RemovedComponents:
     - {fileID: 7685686416354012748, guid: 47ec5020ca4c8f449ad91b670a917d16, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 47ec5020ca4c8f449ad91b670a917d16, type: 3}
@@ -1854,7 +1858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26aa5899b29f2784381574d20c3caec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 
+  itemType: Bee
   score: 0
 --- !u!1 &2085726102
 GameObject:
