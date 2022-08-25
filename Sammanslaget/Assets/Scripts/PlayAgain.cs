@@ -11,6 +11,7 @@ public class PlayAgain : MonoBehaviour
         PickUpsScore.Cherry = 0;
         PickUpsScore.Bottle = 0;
         PickUpsScore.Bee = 0;
+        PickUpsScore.Shirt = 0;
         SceneManager.LoadScene("Game");
     }
 }

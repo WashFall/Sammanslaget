@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
             rb.velocity = new Vector2(0, 20);
+            ServiceLocator.sound.PlayOnce("jump");
         }
     }
 }
