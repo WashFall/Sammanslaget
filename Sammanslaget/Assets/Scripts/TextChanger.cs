@@ -7,10 +7,10 @@ public class TextChanger : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<TMP_Text>().text = GameManager.INSTANCE.endTexts[GameManager.INSTANCE.textIndex];
-        if(GameManager.INSTANCE.textIndex < 2)
-            GameManager.INSTANCE.textIndex++;
-        else if(GameManager.INSTANCE.textIndex == 2)
-            GameManager.INSTANCE.textIndex = 0;
+        GetComponent<TMP_Text>().text = GameManager.INSTANCE.endTexts[EndScreenTexts.textIndex];
+        if(EndScreenTexts.textIndex < 2)
+            EndScreenTexts.textIndex++;
+        else if(EndScreenTexts.textIndex == 2)
+            EndScreenTexts.textIndex = 0;
     }
 }

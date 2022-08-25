@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: cfde25a7511d2764e8c28a3600146213, type: 3}
+    - target: {fileID: 6839801711521224123, guid: c53d14805ac39f44a80c079ca2494f03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7758853343646829607, guid: c53d14805ac39f44a80c079ca2494f03, type: 3}
       propertyPath: m_Name
       value: Bottle

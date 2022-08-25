@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private MeshRenderer skyRend;
     public string[] endTexts = new string[3] 
     { EndScreenTexts.text1, EndScreenTexts.text2, EndScreenTexts.text3 };
-    public int textIndex = 0;
+    public float timer;
 
     private bool sliderActive = true;
 
@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         skyRend = sky.GetComponent<MeshRenderer>();
         sunRend = sun.GetComponent<SpriteRenderer>();
+        timer = Time.time;
     }
 
     private void Update()
@@ -50,6 +51,14 @@ public class GameManager : MonoBehaviour
         if(WorldState.Value == 5 && PickUpsScore.Bottle >= 10)
         {
             SceneManager.LoadScene("WinScreen");
+        }
+        else if(WorldState.Value == -5 && PickUpsScore.Cherry >= 10)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
+        else if (Time.time > timer + 120)
+        {
+            SceneManager.LoadScene("LoseScreen");
         }
     }
 
