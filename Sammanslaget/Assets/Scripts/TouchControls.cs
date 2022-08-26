@@ -20,6 +20,7 @@ public class TouchControls : MonoBehaviour
         {
             player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 20);
             ServiceLocator.sound.PlayOnce("jump2");
+            TextToggle.toggle = true;
         }
     }
 }

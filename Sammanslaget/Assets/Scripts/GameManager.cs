@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public string[] endTexts = new string[3] 
     { EndScreenTexts.text1, EndScreenTexts.text2, EndScreenTexts.text3 };
     public float timer;
+    public GameObject infoText;
 
     private bool sliderActive = true;
 
@@ -64,6 +65,12 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");
         }
+
+        if (TextToggle.toggle)
+        {
+            infoText.SetActive(false);
+        }
+
     }
 
     public void OnPickUp(GameObject pickUp)

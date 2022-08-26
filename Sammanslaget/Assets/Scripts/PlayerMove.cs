@@ -18,6 +18,7 @@ public class PlayerMove : MonoBehaviour
         {
             rb.velocity = new Vector2(0, 20);
             ServiceLocator.sound.PlayOnce("jump2");
+            TextToggle.toggle = true;
         }
     }
 }
